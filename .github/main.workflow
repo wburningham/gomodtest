@@ -5,5 +5,5 @@ workflow "New workflow" {
 
 action "docker://wburningham/fail" {
   uses = "docker://wburningham/fail"
-  args = "echo hi"
+  args = "\"echo hi\""
 }
