@@ -1,9 +1,10 @@
 workflow "New workflow" {
   on = "push"
-  resolves = ["Hello World", docker://wburningham/fail"]
+  resolves = ["Hello World"]
 }
 
 action "docker://wburningham/fail" {
+  needs = "Hello World"
   uses = "docker://wburningham/fail"
   args = "\"echo hi\""
 }
