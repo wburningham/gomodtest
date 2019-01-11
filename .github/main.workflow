@@ -10,7 +10,7 @@ action "docker://wburningham/fail" {
 }
 
 action "Hello World" {
-  uses = "./action-a"
+  uses = "./action-a/"
   env = {
     MY_NAME = "Bob"
   }
